@@ -12,9 +12,7 @@ jobs:
       contents: read
     steps:
       - name: Save PR number
-        env:
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-        run: echo "$PR_NUMBER" > pr_number.txt
+        run: printf '424242' > pr_number.txt
       - name: Upload PR number
         uses: actions/upload-artifact@v4
         with:
